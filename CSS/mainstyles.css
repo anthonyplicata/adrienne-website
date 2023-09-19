@@ -1,0 +1,235 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: beige;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto 1.2rem auto; 
+    border-bottom: 12px dashed black;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-decoration: none;
+    position: sticky;
+    padding: 0;
+}
+
+.cat {
+    width: 25%;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+@keyframes jump-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateY(-9px) }
+    35% { transform: translateY(-9px) rotate(17deg) }
+    55% { transform: translateY(-9px) rotate(-17deg) }
+    65% { transform: translateY(-9px) rotate(17deg) }
+    75% { transform: translateY(-9px) rotate(-17deg) }
+    100% { transform: translateY(0) rotate(0) }
+  }
+
+.cat:hover {
+    border-radius: 50%;
+    animation: jump-shaking .5s infinite;
+}
+
+a {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 25px;
+    color: black;
+    align-content: center;
+}
+
+a:visited {
+    color: gray;
+}
+
+.profile-img {
+    display: grid;
+    justify-content: center;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    margin: 20px auto;
+    width: 50%;
+    border: 5px solid gray;
+    border-radius: 25%;
+    transition: transform 500ms;
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+.profile-img:hover {
+    animation: tilt-shaking 0.5s infinite;
+    border: 10px dashed aqua;
+    cursor: pointer;
+}
+
+.img-description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+
+.img-description{
+    visibility: hidden;
+    color: black;
+    font-family: 'Poppins';
+    font-size: 2rem;
+    opacity: 0;
+}
+
+
+.header-tag {
+    font-family: 'Corben', Courier, monospace;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.header-description {
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Poppins';
+    font-size: 1rem;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+section {
+    margin: 0 auto;
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 0.75rem;
+    width: 95%;
+    font-family: 'Poppins';
+    background-color: white;
+}
+
+h2 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    text-align: left;
+    border: 2px solid black;
+    border-radius: 1rem;
+    margin: 0.25rem;
+}
+
+li:hover {
+    border: 3px dotted rgb(24, 224, 24);
+}
+
+@media only screen and (min-width: 429px) {
+
+    .socials {
+        flex-wrap: nowrap;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .tag {
+        background-color: black;
+        color: beige;
+        width: 100%;
+    }
+
+    .header-tag {
+        margin: 0 auto;
+    }
+
+    .header-description {
+        margin: 1rem;
+    }
+
+    main {
+        display: grid;
+        grid-auto-columns: 1fr;
+        gap: 0.25rem;
+    }
+
+
+    .bio {
+        grid-column: 1 / 2;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    .bio:hover {
+        border: 10px dashed brown;
+    }
+
+    .interests:hover {
+        border: 10px dashed purple;
+    }
+
+    .contact {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .interests {
+        grid-column: 3 / 4;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .contact:hover {
+        border: 10px dashed sandybrown;
+    }
+
+    section {
+        min-height: 200px;
+    }
+}

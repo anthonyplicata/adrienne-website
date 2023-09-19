@@ -1,0 +1,179 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+    width: 100%;
+    background-color: beige;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    border-bottom: 12px dashed black;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-decoration: none;
+    position: sticky;
+    padding: 0;
+}
+
+a {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 25px;
+    color: black;
+    align-content: center;
+}
+
+a:visited {
+    color: gray;
+}
+
+.header-tag {
+    font-family: 'Corben', Courier, monospace;
+    font-size: 3rem;
+    margin: 20px auto;
+}
+
+.tag {
+    margin: 20px auto;
+}
+
+img {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+.gallery-grid {
+    display: grid;
+}
+
+.grid {
+    display: grid;
+    place-content: center;
+    gap: 1.25rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four'
+    'five'
+    'six'
+    'seven'
+    'eight';
+
+    padding-block: 2rem;
+    width: min(100%, 70rem);
+    margin-inline: auto;
+}
+
+.grid img:nth-child(1) {
+    grid-area: one;
+}
+
+.grid img:nth-child(2) {
+    grid-area: two;
+}
+
+.grid img:nth-child(3) {
+    grid-area: three;
+}
+
+.grid img:nth-child(4) {
+    grid-area: four;
+}
+
+.grid img:nth-child(5) {
+    grid-area: five;
+}
+
+.grid img:nth-child(6) {
+    grid-area: six;
+}
+
+.grid img:nth-child(7) {
+    grid-area: seven;
+}
+
+.grid img:nth-child(8) {
+    grid-area: eight;
+}
+
+section {
+    margin: 15px;
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 10px;
+    font-family: 'Poppins';
+    background-color: white;
+}
+
+h2 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.socials {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    text-align: left;
+    border: 2px solid black;
+    border-radius: 12px;
+    margin: 5px;
+}
+
+li:hover {
+    border: 3px dotted rgb(24, 224, 24);
+}
+
+@media screen and (min-width: 768px) {
+
+    .header-tag {
+        margin: 0 auto;
+    }
+
+    .header-description {
+        margin: 15px;
+    }
+
+    .grid {
+        grid-template-areas: 
+        'one two'
+        'one eight'
+        'three four'
+        'five six'
+        'seven seven';
+    }
+}
+
+@media screen and (min-width: 1100px) { 
+    .grid {
+        grid-template-areas: 
+        'one four'
+        'two eight'
+        'three five'
+        'six seven';
+    }
+}
