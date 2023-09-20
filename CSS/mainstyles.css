@@ -85,7 +85,7 @@ a:visited {
 
 .profile-img:hover {
     animation: tilt-shaking 0.5s infinite;
-    border: 10px dashed aqua;
+    border: 0.5rem dashed aqua;
     cursor: pointer;
 }
 
@@ -135,7 +135,7 @@ main {
 
 section {
     margin: 0 auto;
-    border: 3px solid black;
+    border: 0.25px solid black;
     border-radius: 12px;
     padding: 0.75rem;
     width: 95%;
